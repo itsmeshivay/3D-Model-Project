@@ -1,8 +1,13 @@
+/* App container */
 .App {
+  min-height: 100vh;                  /* Full screen height */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;           /* Vertical center */
+  align-items: center;               /* Horizontal center */
   padding: 20px;
+  background-color: #111;            /* Optional: dark background */
+  color: white;                      /* Optional: light text */
 }
 
 /* Form Container */
@@ -14,6 +19,7 @@
   margin: auto;
 }
 
+/* Input Field */
 .prompt-input {
   padding: 10px;
   width: 100%;
@@ -24,6 +30,7 @@
   border-radius: 4px;
 }
 
+/* Submit Button */
 .button-generate {
   padding: 10px 16px;
   margin-top: 10px;
@@ -41,7 +48,7 @@
   cursor: not-allowed;
 }
 
-/* Loader */
+/* Loader Text */
 .loader {
   margin-top: 15px;
   font-weight: bold;
@@ -49,7 +56,7 @@
   text-align: center;
 }
 
-/* Model Viewer */
+/* Model Viewer Container */
 .meshy-model-viewer-container {
   margin-top: 20px;
   display: flex;
@@ -60,9 +67,11 @@
   border-radius: 8px;
   background-color: #f9f9f9;
   width: 100%;
+  max-width: 450px;
   box-sizing: border-box;
 }
 
+/* Actual Model Viewer Styling */
 .meshy-model-viewer-container model-viewer {
   width: 100%;
   max-width: 400px;
@@ -70,7 +79,7 @@
   aspect-ratio: 1 / 1;
 }
 
-/* RESPONSIVE BREAKPOINTS */
+/* Responsive: Tablet */
 @media (max-width: 768px) {
   .prompt-input,
   .button-generate {
@@ -87,18 +96,17 @@
   }
 }
 
+/* Responsive: Mobile */
 @media (max-width: 480px) {
-  .prompt-input {
+  .prompt-input{
     max-width: 100%;
     font-size: 14px;
   }
-
-  .button-generate {
-    font-size: 14px;
+  .button-generate{
+    font: 14px;
     padding: 8px 12px;
   }
-
-  .loader {
-    font-size: 14px;
-  }
+  .loader{
+    font-size: 14px;
+  }
 }
