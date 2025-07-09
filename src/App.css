@@ -1,13 +1,16 @@
 /* App container */
 .App {
-  min-height: 100vh;                  /* Full screen height */
+  min-height: 100vh;
+  width: 100vw;
+  padding: 20px;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;           /* Vertical center */
-  align-items: center;               /* Horizontal center */
-  padding: 20px;
-  background-color: #111;            /* Optional: dark background */
-  color: white;                      /* Optional: light text */
+  justify-content: center;  /* Vertical center */
+  align-items: center;      /* Horizontal center */
+  background-color: #111;
+  color: white;
+  box-sizing: border-box;
 }
 
 /* Form Container */
@@ -71,11 +74,10 @@
   box-sizing: border-box;
 }
 
-/* Actual Model Viewer Styling */
+/* Actual Model Viewer */
 .meshy-model-viewer-container model-viewer {
   width: 100%;
   max-width: 400px;
-  height: auto;
   aspect-ratio: 1 / 1;
 }
 
@@ -98,15 +100,17 @@
 
 /* Responsive: Mobile */
 @media (max-width: 480px) {
-  .prompt-input{
+  .prompt-input {
     max-width: 100%;
     font-size: 14px;
   }
-  .button-generate{
-    font: 14px;
+
+  .button-generate {
+    font-size: 14px;
     padding: 8px 12px;
   }
-  .loader{
-    font-size: 14px;
-  }
+
+  .loader {
+    font-size: 14px;
+  }
 }
