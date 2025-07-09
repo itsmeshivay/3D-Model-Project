@@ -6,8 +6,9 @@ import './App.css';
 function App(){
   return (
     <div className="App">
-      <h1>3D Model Generator App</h1>
-      <MeshyForm/>
+    <div className='content'> 
+       <h1 className='heading'>3D Model Generator App</h1>
+      <MeshyForm/></div>
     </div>
   );
 }

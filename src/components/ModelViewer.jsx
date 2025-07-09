@@ -16,4 +16,4 @@ const ModelViewer = ({ url }) => {
   );
 };
 
-export default ModelViewer;
+export default ModelViewer;

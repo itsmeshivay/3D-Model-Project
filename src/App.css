@@ -1,116 +1,115 @@
-/* App container */
+/* Root Container */
 .App {
   min-height: 100vh;
-  width: 100vw;
-  padding: 20px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;  /* Vertical center */
-  align-items: center;      /* Horizontal center */
-  background-color: #111;
-  color: white;
-  box-sizing: border-box;
-}
-
-/* Form Container */
-.form-container {
-  padding: 20px;
-  text-align: center;
   width: 100%;
-  max-width: 500px;
-  margin: auto;
-}
-
-/* Input Field */
-.prompt-input {
-  padding: 10px;
-  width: 100%;
-  max-width: 300px;
-  margin-bottom: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-/* Submit Button */
-.button-generate {
-  padding: 10px 16px;
-  margin-top: 10px;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-left: 10px;
-}
-
-.button-generate:disabled {
-  background-color: #aaa;
-  cursor: not-allowed;
-}
-
-/* Loader Text */
-.loader {
-  margin-top: 15px;
-  font-weight: bold;
-  color: #555;
-  text-align: center;
-}
-
-/* Model Viewer Container */
-.meshy-model-viewer-container {
-  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  width: 100%;
-  max-width: 450px;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  padding: 20px;
   box-sizing: border-box;
 }
 
-/* Actual Model Viewer */
-.meshy-model-viewer-container model-viewer {
+/* Left section for heading + form */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 500px;
   width: 100%;
-  max-width: 400px;
-  aspect-ratio: 1 / 1;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px 24px;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
 }
 
-/* Responsive: Tablet */
+/* Heading */
+.heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 24px;
+}
+
+/* Form */
+.form-container {
+  width: 100%;
+}
+
+/* Input */
+.prompt-input {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  outline: none;
+}
+
+.prompt-input::placeholder {
+  color: #ccc;
+}
+
+.prompt-input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  outline: 2px solid #00ffc3;
+}
+
+/* Button */
+.button-generate {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #00ff99, #00ccff);
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 255, 204, 0.3);
+}
+
+.button-generate:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 255, 204, 0.5);
+}
+
+/* Responsive Layout */
 @media (max-width: 768px) {
+  .App {
+    padding: 30px 15px;
+  }
+
+  .left-section {
+    max-width: 100%;
+    padding: 30px 20px;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
   .prompt-input,
   .button-generate {
-    width: 100%;
-    margin: 5px 0;
-  }
-
-  .form-container {
-    padding: 15px;
-  }
-
-  .meshy-model-viewer-container {
-    flex-direction: column;
+    font-size: 15px;
+    padding: 12px;
   }
 }
 
-/* Responsive: Mobile */
 @media (max-width: 480px) {
-  .prompt-input {
-    max-width: 100%;
-    font-size: 14px;
+  .heading {
+    font-size: 1.6rem;
   }
 
+  .prompt-input,
   .button-generate {
     font-size: 14px;
-    padding: 8px 12px;
-  }
-
-  .loader {
-    font-size: 14px;
+    padding: 10px 12px;
   }
 }
